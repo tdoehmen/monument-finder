@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TSW Assignment 3</title>
+	</head>
+
+	<body>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=visualization"></script>
+        
+    	<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	    <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+        <style>
+          .map{
+            height: 500px;
+            width: 800px;
+            margin: 0px;
+            padding: 0px
+          }
+        </style>
+		<div class="container">
+			<div class='row'>
+				<div class='col-lg-12'>
+					<h1>Welcome to the Monument Heatmap</h1>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='col-lg-3'>
+					<h3>Find Monument</h3>
+					<p>Please insert your current location and name of the monument you are looking for</p>
+					<form role='form'>
+						<div class='form-group'>
+							<input type='text' class='form-control' id='location' placeholder='Your Location (woe_id)'>
+                            <input type='text' class='form-control' id='monument' placeholder='Monument Name'>
+						</div>
+					</form>
+					<div><a id="searchMonument" class='btn btn-primary'>search</a></div>
+				</div>
+				<div class='col-lg-9'>
+					<h3>Result</h3>
+					<div id="searchResults" class="map"></div>
+                    <div id="numerOfPictures"></div>
+				</div>
+			</div>
+        </div>
+		
+        <script src='{{ url_for("static", filename="js/jquery-1.11.0.min.js") }}' type='text/javascript'></script>
+		<script src='{{ url_for("static", filename="js/heatmap.js") }}' type='text/javascript'></script>
+        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		
+	</body>
+</head>
+
+
