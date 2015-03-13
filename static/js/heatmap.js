@@ -29,7 +29,7 @@ var coordinateMapType = new CoordMapType();
 $('#searchMonument').on('click',function(e){
 	var location = $('#location').val();
     var monument = $('#monument').val();
-	$.get('/query_flickr',data={'location': location, 'monument': monument}, function(data){
+	$.get('http://monumentfinder-tilldoe.rhcloud.com/query_flickr',data={'location': location, 'monument': monument}, function(data){
 		// If successful, add the data to the DOM tree under the 'searchResults' element.
         var photos = jQuery.parseJSON(data);
 
